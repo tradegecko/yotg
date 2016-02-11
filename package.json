@@ -1,0 +1,16 @@
+{
+  "name": "generator-tg-ember",
+  "version": "0.1.0",
+  "description": "A basic cli generator for tradegeckos core app",
+  "author": "Mitch Ellis",
+  "company": "TradeGecko",
+  "files": [
+    "generators/component"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.22.5"
+  }
+}
