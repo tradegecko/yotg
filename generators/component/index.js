@@ -6,6 +6,8 @@ module.exports = generators.Base.extend({
     generators.Base.apply(this, arguments);
 
     this.argument('componentname', {type: String, required: true});
+    this.argument('generatestylesheet', {type: Boolean, required: false, default: true});
+
   },
   generateComponentES6: function() {
     this.fs.copyTpl(
@@ -22,11 +24,13 @@ module.exports = generators.Base.extend({
     );
   },
   generateComponentHANDLEBARS: function() {
-    this.fs.copyTpl(
-      this.templatePath('component.handlebars'),
-      this.destinationPath('app/assets/javascripts/templates/components/' + this.componentname + '.handlebars'),
-      { title: 'TG Component HandleBars generated' }
-    );
+    if(this.generatestylesheet === true) {
+        this.fs.copyTpl(
+        this.templatePath('component.handlebars'),
+        this.destinationPath('app/assets/javascripts/templates/components/' + this.componentname + '.handlebars'),
+        { title: 'TG Component HandleBars generated' }
+      );
+    }
   }
 
 });

@@ -1,6 +1,6 @@
 {
   "name": "generator-tg-ember",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A basic cli generator for tradegeckos core app",
   "author": "Mitch Ellis",
   "company": "TradeGecko",
