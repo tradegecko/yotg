@@ -18,7 +18,10 @@ module.exports = generators.Base.extend({
     this.fs.copyTpl(
       this.templatePath('component.scss'),
       this.destinationPath('app/assets/stylesheets/components/' + this.componentname + '.scss'),
-      { title: 'TG Component SCSS generated' }
+      { 
+        'title': 'TG Component SCSS generated', 
+        'component_name': this.componentname  
+      }
     );
   },
   generateComponentHANDLEBARS: function() {
